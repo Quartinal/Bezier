@@ -1,0 +1,36 @@
+{
+  "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
+  "organizeImports": { "enabled": true },
+  "files": {
+    "ignore": ["node_modules/**", "dist/**", "pnpm-lock.yaml", "public/**"]
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "style": {
+        "useNodejsImportProtocol": "warn",
+        "useTemplate": "off",
+        "useSelfClosingElements": "off",
+        "noNonNullAssertion": "off"
+      },
+      "suspicious": {
+        "noExplicitAny": "off"
+      },
+      "complexity": {
+        "noStaticOnlyClass": "off"
+      }
+    }
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf"
+  },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "arrowParentheses": "asNeeded"
+    }
+  }
+}
